@@ -1,0 +1,38 @@
+{
+  "name": "quithub",
+  "version": "1.0.0",
+  "description": "social network for recovering programmers",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studiozandra/quitHub.git"
+  },
+  "keywords": [
+    "Zandra",
+    "Kubota"
+  ],
+  "author": "Zandra Kubota",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/studiozandra/quitHub/issues"
+  },
+  "homepage": "https://github.com/studiozandra/quitHub#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.20",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "i": "^0.3.6",
+    "nodemon": "^2.0.4"
+  }
+}
