@@ -1,8 +1,13 @@
-// Simple Express server
+// Simple Express server (connection logic is inside db.js)
 const express = require('express');
+// add in database connection config
+const connectDB = require('./config/db');
 
 // Initialize app variable with Express
 const app = express();
+
+// Connect to database
+connectDB();
 
 // test endpoint
 app.get('/', (req, res) => res.send('API running'));
