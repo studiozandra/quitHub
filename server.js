@@ -9,6 +9,10 @@ const app = express();
 // Connect to database
 connectDB();
 
+// Init Middleware -- now included w/express. so no more app.use(bodyParser.json())
+// gets the data from users.js in req.body
+app.use(express.json({ extended: false }))
+
 // test endpoint
 app.get('/', (req, res) => res.send('API running'));
 
