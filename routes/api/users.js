@@ -9,7 +9,7 @@ const { check, validationResult } = require('express-validator');
 // no "app.get", instead "router"
 // type of req and endpoint:
 // @route POST api/users 
-// @desc Register user -- we need to send name, email ,and password
+// @desc Register user -- we need to send name, email, and password in order to register users
 // @access Public (no token needed)
 router.post('/', [
     check('name', 'Name is required').not().isEmpty(), 
@@ -18,9 +18,10 @@ router.post('/', [
     ], 
     (req, res) => {
     const errors = validationResult(req);
+    // console.log(req.body);
     // if there are errors
     if(!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() })
+        return res.status(400).json({ errors: errors.array() }) // a 400 is bad request
     }
     console.log(req.body);
     res.send('User route')
