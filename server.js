@@ -10,7 +10,7 @@ const app = express();
 connectDB();
 
 // Init Middleware -- now included w/express. so no more app.use(bodyParser.json())
-// gets the data from users.js in req.body
+// gets the data from users.js in req.body . In Postman software, we can send data (POST req) content type raw json.
 app.use(express.json({ extended: false }))
 
 // test endpoint
